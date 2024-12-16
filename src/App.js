@@ -10,6 +10,7 @@ import AppNavBar from './components/AppNavBar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Workouts from './pages/Workouts';
 
 function App() {
     const [user, setUser] = useState({
@@ -64,6 +65,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/workouts" element={<Workouts />} />
               </Routes>
             </Container>
           </Router>

@@ -7,7 +7,7 @@ import UserContext from '../context/UserContext';
 import { Notyf } from 'notyf';
 
 export default function Register(){
-	const {user} = useContext(UserContext);
+	const { user } = useContext(UserContext);
 
 	const navigate = useNavigate();
 	const notyf = new Notyf();
@@ -57,7 +57,6 @@ export default function Register(){
 			} else {
 				notyf.error("Something went wrong, try again!");
 			}
-			
 		})
 	}
 

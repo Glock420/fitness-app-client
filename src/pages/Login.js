@@ -7,7 +7,7 @@ import UserContext from '../context/UserContext';
 import { Notyf } from 'notyf';
 
 export default function Login() {
-    const {user, setUser} = useContext(UserContext);
+    const { user, setUser } = useContext(UserContext);
 
     const notyf = new Notyf();
 
