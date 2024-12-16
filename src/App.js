@@ -7,6 +7,8 @@ import { UserProvider } from './context/UserContext';
 
 import AppNavBar from './components/AppNavBar';
 
+import Home from './pages/Home';
+
 function App() {
     const [user, setUser] = useState({
       id: null,
