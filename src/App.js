@@ -8,6 +8,7 @@ import { UserProvider } from './context/UserContext';
 import AppNavBar from './components/AppNavBar';
 
 import Home from './pages/Home';
+import Login from './pages/Login';
 
 function App() {
     const [user, setUser] = useState({
@@ -58,6 +59,7 @@ function App() {
             <Container>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
               </Routes>
             </Container>
           </Router>
