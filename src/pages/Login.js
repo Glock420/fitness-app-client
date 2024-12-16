@@ -2,9 +2,9 @@ import { useState, useEffect, useContext } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import { Navigate } from 'react-router-dom';
 
-import { Notyf } from 'notyf';
-
 import UserContext from '../context/UserContext';
+
+import { Notyf } from 'notyf';
 
 export default function Login() {
     const {user, setUser} = useContext(UserContext);
@@ -66,62 +66,62 @@ export default function Login() {
 
 
     useEffect(() => {
-        if(email !== '' && password !== ''){
+        if(email !== '' && password !== '') {
             setIsActive(true);
-        }else{
+        } else {
             setIsActive(false);
         }
     }, [email, password]);
 
-
     return(
         (user.id !== null)
             ?
-            <Navigate to='/workouts'/>
+                <Navigate to='/workouts' />
             :    
-            <>
-                <h1 className="my-5 text-center">Login</h1>
-                <Container className="col-6 mt-5 p-5 border border-secondary rounded">
-                    <Form onSubmit={(e) => authenticate(e)}>
-                        <Form.Group>
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control 
-                                type="email" 
-                                placeholder="Enter your email here" 
-                                required
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </Form.Group>
+                <>
+                    <Container className="col-6 mt-5 p-5 border border-secondary rounded">
+                        <Form onSubmit={(e) => authenticate(e)}>
+                            <h1 className="mb-5 text-center">Login</h1>
 
-                        <Form.Group className="my-3">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control 
-                                type="password" 
-                                placeholder="Enter your password here" 
-                                required
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control 
+                                    type="email" 
+                                    placeholder="Enter your email here" 
+                                    required
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </Form.Group>
 
-                        {isActive 
-                            ? 
-                                <div className="d-grid gap-2 mt-5">
-                                    <Button variant="success" type="submit" id="loginBtn">
-                                        Login
-                                    </Button>
-                                </div>
-                            : 
-                                <div className="d-grid gap-2 mt-5">
-                                    <Button variant="success" type="submit" id="loginBtn" disabled>
-                                        Login
-                                    </Button>
-                                </div>
-                        }  
-                    </Form> 
-                </Container>
-                <p className = 'mt-4 text-center'>Don't have an account yet? <a href="/register" className="text-decoration-none">Click here</a> to register.</p>
-            </> 
-    )
+                            <Form.Group className="my-3">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control 
+                                    type="password" 
+                                    placeholder="Enter your password here" 
+                                    required
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </Form.Group>
+
+                            {isActive 
+                                ? 
+                                    <div className="d-grid gap-2 mt-5">
+                                        <Button variant="success" type="submit" id="loginBtn">
+                                            Login
+                                        </Button>
+                                    </div>
+                                : 
+                                    <div className="d-grid gap-2 mt-5">
+                                        <Button variant="success" type="submit" id="loginBtn" disabled>
+                                            Login
+                                        </Button>
+                                    </div>
+                            }  
+                        </Form> 
+                    </Container>
+                    <p className = 'mt-4 text-center'>Don't have an account yet? <a href="/register" className="text-decoration-none">Click here</a> to register.</p>
+                </> 
+    );
 }

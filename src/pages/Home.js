@@ -21,5 +21,5 @@ export default function Home() {
                 }
             </Col>
         </Row>
-	)
+	);
 }

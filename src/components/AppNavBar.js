@@ -32,5 +32,5 @@ export default function AppNavBar() {
 			    </Navbar.Collapse>
 			</Container>
 		</Navbar>
-	)
+	);
 }
