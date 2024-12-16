@@ -11,7 +11,7 @@ export default function AppNavBar() {
 	return(
 		<Navbar bg="dark" expand="lg" data-bs-theme="dark">
 			<Container fluid>
-			    <Navbar.Brand as={Link} to="/">G7 Sweat Shop</Navbar.Brand>
+			    <Navbar.Brand as={Link} to="/">S84 Workouts</Navbar.Brand>
 			    <Navbar.Toggle aria-controls="basic-navbar-nav" />
 			    <Navbar.Collapse id="basic-navbar-nav">
 				    <Nav className="ms-auto">
