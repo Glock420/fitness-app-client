@@ -16,17 +16,18 @@ export default function AppNavBar() {
 			    <Navbar.Collapse id="basic-navbar-nav">
 				    <Nav className="ms-auto">
 				    	<Nav.Link as={NavLink} to="/" exact="true">Home</Nav.Link>
-				    	{(user.id !== null)? 
-				        	<>
-				        		<Nav.Link as={NavLink} to="/workouts" exact="true">Workouts</Nav.Link>
-				        		<Nav.Link as={NavLink} to="/addWorkout" exact="true">Add Workout</Nav.Link>
-				        		<Nav.Link as={NavLink} to="/logout" exact="true">Logout</Nav.Link>
-				        	</>
-						: 
-							<>
-								<Nav.Link as={NavLink} to="/login" exact="true">Login</Nav.Link>
-								<Nav.Link as={NavLink} to="/register" exact="true">Register</Nav.Link>
-							</>
+				    	{(user.id !== null)
+				    		? 
+					        	<>
+					        		<Nav.Link as={NavLink} to="/workouts" exact="true">Workouts</Nav.Link>
+					        		<Nav.Link as={NavLink} to="/addWorkout" exact="true">Add Workout</Nav.Link>
+					        		<Nav.Link as={NavLink} to="/logout" exact="true">Logout</Nav.Link>
+					        	</>
+							: 
+								<>
+									<Nav.Link as={NavLink} to="/login" exact="true">Login</Nav.Link>
+									<Nav.Link as={NavLink} to="/register" exact="true">Register</Nav.Link>
+								</>
 						}
 				    </Nav>
 			    </Navbar.Collapse>
